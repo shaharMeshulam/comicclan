@@ -1,0 +1,33 @@
+<a (click)="onBack()">
+  <span>
+    <</span> <span>Back to collection
+  </span>
+</a>
+<div *ngIf="!book">No Book Selected</div>
+<div *ngIf="book">
+  <section class="book-details">
+    <div class="book-img">
+      <img [src]="book.image">
+    </div>
+    <div class="book-description">
+      <h2>
+        <span>
+          {{ book.name }}
+        </span>
+        <app-rating [maxNumOfStars]="5" [rating]="book.rating"></app-rating>
+      </h2>
+      <p><span>Writer:</span> {{ book.writer }}</p>
+      <p><span>Artist:</span> {{ book.artist }}</p>
+      <p><span>Publication:</span> {{ book.publication }}</p>
+      <p><span>Owner:</span> {{ book.owner }}</p>
+      <p class="summary">
+        {{ book.summary }}
+      </p>
+    </div>
+  </section>
+
+  <section class="random-books">
+    <h2>Other Random Books</h2>
+    <app-book-list [list]="randoms"></app-book-list>
+  </section>
+</div>

@@ -1,0 +1,9 @@
+<ul class="book-list" (window:resize)="onResize()" #bookList [class.justify-center]="maxItemsPerRow === 1">
+  <li *ngFor="let book of list; let i = index" (click)="onBookSelected(book)" [class.not-last-in-row]="(i + 1) % maxItemsPerRow !== 0">
+    <div class="book-list-wrapper">
+      <app-book-teaser [book]="book"></app-book-teaser>
+    </div>
+  </li>
+  <li *ngFor="let leftover of leftovers; let i = index" [class.not-last-in-row]="i !== leftovers.length - 1">
+  </li>
+</ul>

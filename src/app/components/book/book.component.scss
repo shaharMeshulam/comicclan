@@ -1,0 +1,88 @@
+@import '../../shared/variables';
+
+a {
+  color: $brightGray;
+  font-size: 20px;
+  margin-top: 8px;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+
+  span:nth-child(2) {
+    text-decoration: underline;
+  }
+}
+
+h2 {
+  color: $heading;
+  font-size: $headingSize;
+
+  span { 
+    padding-right: 40px;
+  }
+}
+
+.book-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 35px;
+  padding-bottom: 71px;
+  border-bottom: $secodaryGray solid 2px;
+
+    p {
+    font-size: 16px;
+    color: $bookDescMain;
+    margin-top: 12px;
+    font-weight: bold;
+    line-height: 19px;
+
+    span {
+      color: $bookDescSecondary;
+      font-weight: normal;
+      padding-right: 6px;
+    }
+
+    &:nth-child(2) {
+      margin-top: 16px;
+    }
+
+    &:last-child {
+      margin-top: 41px;
+    }
+  }
+
+  .book-description {
+    padding: 6px 0 0 22px;
+    flex: 1;
+  }
+
+  .book-img {
+
+    img {
+      width: 340px;
+    }
+  }
+}
+
+.random-books {
+  margin-top: 37px;
+}
+
+@media only screen and (max-width: 592px) {
+  .book-details {
+
+    .book-description {
+      padding-left: 0;
+    }
+
+    .book-img {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

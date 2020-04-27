@@ -1,0 +1,37 @@
+.book-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
+	width: 100%;
+
+	.book-list-wrapper {
+		width: 200px;
+	}
+
+	li {
+		width: 200px;
+		cursor: pointer;
+
+		&.not-last-in-row {
+			margin-right: 65px;
+		}
+	}
+
+	&.justify-center {
+		justify-content: center;
+	}
+}
+
+@media only screen and (max-width: 537px) {
+  .book-list {
+		li {
+			width: 265px;
+
+			.book-list-wrapper {
+				margin: 0 auto;
+			}
+		}
+	}
+}

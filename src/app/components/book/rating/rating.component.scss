@@ -1,0 +1,15 @@
+.rating {
+  white-space: nowrap;
+
+  .star {
+    margin-right: 10px;
+    width: 25px;
+    height: 24px;
+    background-image: url('/assets/images/Empty star.svg');
+    display: inline-block;
+
+    &.active {
+      background-image: url('/assets/images/Full star.svg');
+    }
+  }
+}

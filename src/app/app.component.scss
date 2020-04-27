@@ -1,0 +1,50 @@
+@import './shared/variables';
+
+header {
+  background-color: $secodaryGray;
+  padding: 21px 0 18px 26px;
+}
+
+main {
+  padding: 28px;
+}
+
+.search {
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+  }
+
+  input {
+    font-size: 20px;
+    color: $searchGray;
+    padding: 18px 0 13px 55px;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 3px solid $brightGray;
+    width: 100%;
+  }
+}
+
+.grouping {
+  margin-top: 28px;
+
+  li {
+    display: inline-block;
+    color: $brightGray;
+    font-size: 18px;
+    margin-right: 8px;
+    padding: 10px 15px 10px 18px;
+
+    &.active {
+      background-color: $orange;
+      color: white;
+      box-shadow: 0px 2px 3px rgba(34, 34, 34, 0.6);
+      border-radius: 19px;
+    }
+  }
+}
+

@@ -1,0 +1,20 @@
+<section class="search">
+  <i><img src="assets/images/Search Icon.svg"></i><input type="text" placeholder="Search by book name" #searchInput [value]="query" (input)="onInput($event)">
+</section>
+<section class="grouping">
+  <ul>
+    <li routerLinkActive="active" routerLink="/year">Year</li>
+    <li routerLinkActive="active" routerLink="/writer">Writer</li>
+    <li routerLinkActive="active" routerLink="/artist">Artist</li>
+    <li routerLinkActive="active" routerLink="/owner">Owner</li>
+    <li routerLinkActive="active" routerLink="/random">Random</li>
+  </ul>
+</section>
+<section class="list">
+  <div *ngIf="books">
+    <div class="group" *ngFor="let group of books | sortBy: 'name'">
+      <h2 class="group-name">{{ group.name | titlecase }}</h2>
+        <app-book-list [list]="group.books" [autoSizing]="true"></app-book-list>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+@import '../../../shared/variables';
+
+img {
+  margin-top: 32px;
+}
+
+.description {
+  margin-top: 16px;
+}
+
+p {
+  color: $bookDescMain;
+
+  &.name {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  &.owend-by {
+    margin-top: 14px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  span:first-child {
+    color: $bookDescSecondary;
+  }
+}
